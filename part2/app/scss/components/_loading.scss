@@ -1,0 +1,86 @@
+.loading {
+    display: flex;
+    &__text {
+        font-size: 12px;
+        font-weight: 900;
+        color: $loading-color;
+        margin-left: 20px;
+    }
+    &__lines {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+    &__line {
+        position: absolute;
+        content: '';
+        background: $loading-color;
+        width: 4px;
+        height: 8px;
+        &-0deg {
+            transform: rotate(90deg);
+            right: 0;
+            top: 11px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/8 infinite;
+        }
+        &-45deg {
+            transform: rotate(45deg);
+            top: 0;
+            right: 4px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/7 infinite;
+        }
+        &-90deg {
+            top: -4px;
+            right: 15px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/6 infinite;
+        }
+        &-135deg {
+            transform: rotate(-45deg);
+            top: 0;
+            left: 0;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/5 infinite;
+        }
+        &-180deg {
+            transform: rotate(90deg);
+            left: -4px;
+            top: 11px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/4 infinite;
+        }
+        &-225deg {
+            transform: rotate(-135deg);
+            left: 0;
+            bottom: 0;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/3 infinite;
+        }
+        &-270deg {
+            transform: rotate(180deg);
+            left: 11px;
+            bottom: -4px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity*1/2 infinite;
+        }
+        &-315deg {
+            transform: rotate(135deg);
+            right: 4px;
+            bottom: 0px;
+            animation: line-opacity $duration-line-opacity linear $duration-line-opacity infinite;
+        }
+    }
+}
+
+@keyframes line-opacity {
+    0% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

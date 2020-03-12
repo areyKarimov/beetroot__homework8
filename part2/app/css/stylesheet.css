@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Hans Kendrick';
+    src: url('../fonts/HansKendrick-Medium.woff2') format('woff2'), url('HansKendrick-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hans Kendrick';
+    src: url('../fonts/HansKendrick-Heavy.woff2') format('woff2'), url('../fonts/HansKendrick-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}

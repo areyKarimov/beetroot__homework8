@@ -1,0 +1,96 @@
+@import url(stylesheet.css);
+@import url(normalize.css);
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Miso';
+  background: #fdde7e; }
+
+.cards {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 80px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh; }
+
+.giftcard {
+  height: 65vh;
+  width: 31%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: -1px 0px 3px 1px #d6b03e;
+  -moz-box-shadow: -1px 0px 3px 1px #d6b03e;
+  box-shadow: -1px 0px 3px 1px #d6b03e;
+  padding: 5vh 10%;
+  text-align: center;
+  transition: all 0.3s ease-in;
+  top: 0; }
+  .giftcard:last-child {
+    margin-right: 0; }
+  .giftcard__prise {
+    font-size: 50px;
+    color: #02995b;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in; }
+  .giftcard__type {
+    font-size: 56px;
+    margin: 25px 0; }
+  .giftcard__explanation {
+    font-size: 25px; }
+
+@media screen and (min-width: 900px) {
+  .giftcard:hover {
+    height: 70vh;
+    cursor: pointer; }
+    .giftcard:hover .giftcard__prise {
+      margin-bottom: 50px; } }
+
+@media screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column; }
+  .giftcard {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 50%; }
+    .giftcard:hover {
+      width: 60%;
+      cursor: pointer; } }
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column; }
+  .giftcard {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 80%; }
+    .giftcard:hover {
+      width: 90%;
+      cursor: pointer; } }
+
+@media screen and (max-height: 700px) {
+  .giftcard__img {
+    width: 30%; }
+  .giftcard__type {
+    margin: 10px 0;
+    font-size: 40px; } }
+
+@media screen and (max-height: 400px) {
+  .giftcard {
+    flex-direction: row; }
+    .giftcard__prise {
+      margin: 0 10px 0 0; }
+    .giftcard__img {
+      width: 10%;
+      margin-right: 10px; } }

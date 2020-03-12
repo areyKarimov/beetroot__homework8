@@ -1,0 +1,190 @@
+@import url(stylesheet.css);
+@import url(normalize.css);
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Hans Kendrick';
+  text-transform: uppercase; }
+
+a {
+  margin: 0;
+  padding: 0; }
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  width: 360px;
+  min-height: 540px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in; }
+  .article:hover {
+    transform: scale(1.05); }
+  .article__img {
+    width: 100%;
+    height: 50%; }
+  .article__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  .article__date {
+    padding: 0 25px; }
+  .article__title {
+    padding: 0 25px; }
+  .article__author {
+    margin: 0 0 25px 25px; }
+
+@media screen and (max-width: 1120px) {
+  .article {
+    width: 48%;
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 800px) {
+  .article {
+    width: 100%; }
+    .article__date {
+      margin-top: 20px; } }
+
+.date {
+  font-size: 10px;
+  color: #77746d; }
+  .date-main {
+    color: #8a857b; }
+
+.author {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  z-index: 2; }
+  .author img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 0.3s ease-in; }
+    .author img:hover {
+      transform: scale(1.2); }
+
+.loading {
+  display: flex; }
+  .loading__text {
+    font-size: 12px;
+    font-weight: 900;
+    color: #8996a3;
+    margin-left: 20px; }
+  .loading__lines {
+    position: relative;
+    width: 30px;
+    height: 30px; }
+  .loading__line {
+    position: absolute;
+    content: '';
+    background: #8996a3;
+    width: 4px;
+    height: 8px; }
+    .loading__line-0deg {
+      transform: rotate(90deg);
+      right: 0;
+      top: 11px;
+      animation: line-opacity 2s linear 0.25s infinite; }
+    .loading__line-45deg {
+      transform: rotate(45deg);
+      top: 0;
+      right: 4px;
+      animation: line-opacity 2s linear 0.28571s infinite; }
+    .loading__line-90deg {
+      top: -4px;
+      right: 15px;
+      animation: line-opacity 2s linear 0.33333s infinite; }
+    .loading__line-135deg {
+      transform: rotate(-45deg);
+      top: 0;
+      left: 0;
+      animation: line-opacity 2s linear 0.4s infinite; }
+    .loading__line-180deg {
+      transform: rotate(90deg);
+      left: -4px;
+      top: 11px;
+      animation: line-opacity 2s linear 0.5s infinite; }
+    .loading__line-225deg {
+      transform: rotate(-135deg);
+      left: 0;
+      bottom: 0;
+      animation: line-opacity 2s linear 0.66667s infinite; }
+    .loading__line-270deg {
+      transform: rotate(180deg);
+      left: 11px;
+      bottom: -4px;
+      animation: line-opacity 2s linear 1s infinite; }
+    .loading__line-315deg {
+      transform: rotate(135deg);
+      right: 4px;
+      bottom: 0px;
+      animation: line-opacity 2s linear 2s infinite; }
+
+@keyframes line-opacity {
+  0% {
+    opacity: 1; }
+  14% {
+    opacity: 0; }
+  36% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+.articles {
+  padding: 90px 0;
+  background: #e2e7ec;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .articles__container {
+    display: flex;
+    max-width: 1120px;
+    min-height: 1100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-between;
+    margin-bottom: 80px; }
+  .articles__main {
+    position: relative;
+    background: url(../img/img1.jpg) no-repeat center;
+    background-size: cover;
+    height: 540px;
+    width: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px 45px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in; }
+    .articles__main:hover {
+      transform: scale(1.05); }
+  .articles__title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+    max-width: 60%; }
+
+@media screen and (max-width: 1120px) {
+  .articles__main {
+    width: 100%;
+    margin-bottom: 20px; }
+  .articles__container {
+    max-width: 80%; } }
